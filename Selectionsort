@@ -1,0 +1,17 @@
+ void selection_sort(int a[],int range)
+  {
+    int i,j,k;//k always point to minimum number 
+    for (i = 0; i < range-1; i++)
+    {
+      for (j=k=i; j < range; j++)
+      {
+         if(a[j]<a[k])
+         {
+           k=j;
+         }     
+
+      }//for loop end
+
+      swap(&a[i],&a[k]); 
+    }//for loop end
+  }
