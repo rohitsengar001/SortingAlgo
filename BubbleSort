@@ -1,9 +1,10 @@
 //written in C language
 void bubble_sort(int a[],int range)
  {
-   int pass,innerpass,temp;
+   int pass,innerpass,temp,flag=0;
    for (pass = 1; pass < range; pass += 1)//total pass=(range-1) can be performed
    {
+     flag=0;
      for (innerpass = 0; innerpass <range-pass; innerpass += 1)
      {
        
@@ -13,7 +14,10 @@ void bubble_sort(int a[],int range)
          temp=a[innerpass];
          a[innerpass]=a[innerpass+1];
          a[innerpass+1]=temp;
+         flag=1;
        }//if end
      }//for loop end
+     if(flag==0)
+       break;
    }//for loop end
  }
