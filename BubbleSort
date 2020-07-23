@@ -1,0 +1,19 @@
+//written in C language
+void bubble_sort(int a[],int range)
+ {
+   int pass,innerpass,temp;
+   for (pass = 1; pass < range; pass += 1)//total pass=(range-1) can be performed
+   {
+     for (innerpass = 0; innerpass <range-pass; innerpass += 1)
+     {
+       
+       if (a[innerpass]>a[innerpass+1])//comparing element if get greater then perform shifting
+       {
+       /*------------------- perform shifting---------------------*/
+         temp=a[innerpass];
+         a[innerpass]=a[innerpass+1];
+         a[innerpass+1]=temp;
+       }//if end
+     }//for loop end
+   }//for loop end
+ }
